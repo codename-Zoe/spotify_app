@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
           {next: (data) => {
             this.loading = false;
             localStorage.setItem('access_token', data.token);
-            this.router.navigate(['/newRelease']);
+            this.router.navigate(['/newReleases']);
           },error: (err) => {
             this.loading = false;
             this.warning = err.error.message;
