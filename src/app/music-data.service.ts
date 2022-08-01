@@ -3,10 +3,7 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { SpotifyTokenService } from './spotify-token.service';
 import { environment } from './../environments/environment';
-
-
 import { mergeMap } from 'rxjs/operators';
-import { FavouritesComponent } from './favourites/favourites.component';
 
 @Injectable({
   providedIn: 'root'
