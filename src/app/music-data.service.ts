@@ -52,9 +52,9 @@ export class MusicDataService {
   removeFromFavourites(id:string): Observable<any> {
     return this.http.delete<[String]>(`${environment.userAPIBase}/favourites/${id}`).pipe(mergeMap(favouritesArray => {
       if(favouritesArray.length > 0){
-        favouritesArray.splice(favouritesArray.indexOf(id), 1);
+        let favouritesList = favouritesArray.join(',');
         return this.spotifyToken.getBearerToken().pipe(mergeMap(token => {
-          return this.http.get<any>(`https://api.spotify.com/v1/tracks?ids=${favouritesArray}`, {headers: { "Authorization": `Bearer ${token}` }})
+          return this.http.get<any>(`https://api.spotify.com/v1/tracks?ids=${favouritesList}`, {headers: { "Authorization": `Bearer ${token}` }})
         }));
         // return this.getFavourites();
       } else{
