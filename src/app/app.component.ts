@@ -1,17 +1,20 @@
 /*********************************************************************************
-* WEB422 – Assignment 05
+* WEB422 – Assignment 06
 * I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part of this
 * assignment has been copied manually or electronically from any other source (including web sites) or
 * distributed to other students.
 *
-* Name: Nozomi Tsuchiya   Student ID: 154666192   Date: 2022-07-20
+* Name: Nozomi Tsuchiya    Student ID: 154666192   Date: 2022/08/03
+*
+* Angular App (Deployed) Link: https://frabjous-kringle-42b423.netlify.app
+*
+* User API (Heroku) Link: https://whispering-eyrie-06300.herokuapp.com/
 *
 ********************************************************************************/
 
 import { Component, OnInit } from '@angular/core';
 import { Event, NavigationStart, Router } from '@angular/router';
 import { AuthService } from './auth.service';
-import User from './user';
 
 @Component({
   selector: 'app-root',
