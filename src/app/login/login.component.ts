@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
     onsubmit(){
-      if(this.user.userName.length != 0 && this.user.password.length != 0){
+      if(this.user.userName != "" && this.user.password != ""){
         this.loading = true;
         this.auth.login(this.user).subscribe(
           {next: (data) => {
