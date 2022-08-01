@@ -31,7 +31,8 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/newRelease']);
           },error: (err) => {
             this.loading = false;
-            this.warning = "Cannot retrieve the data";
+            this.warning = err.error.message;
+            console.log(err);
           }}
         )
       }
